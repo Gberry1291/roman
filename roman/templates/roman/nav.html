@@ -1,0 +1,36 @@
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#C4A4E4">
+  <link rel="shortcut icon" type="image/png" href="{% static 'roman/favicon/microphone.png' %}"/>
+  <link rel="stylesheet"  href="{% static 'roman/css/nav.css' %}">
+  <script src="{% static 'roman\jquery-3.6.0.min.js' %}"></script>
+
+  <body>
+
+    <div class="navbar" id=navbar>
+      <div class="left">
+        <div class="menuborder navitemsmall slideit">
+          <div class="center menuclip"></div>
+        </div>
+
+        <a class="navitem fullfill" href="{% url 'home' %}">
+          <div class="center science">
+            Lead a Generation
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+
+{% block pregroup %}{% endblock %}
+
+  </body>
+</html>

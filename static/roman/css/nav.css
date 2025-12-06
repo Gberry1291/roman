@@ -1,0 +1,136 @@
+:root {
+  --bodycolor: #141414;
+  --logocolor: #FFFFFF;
+  --textcolormain:#FFFFFF;
+}
+a{
+  color:inherit;
+  text-decoration: none;
+}
+body{
+  position: absolute;
+  margin: 0%;
+  box-sizing: border-box;
+  padding:0px;
+  left:0px;
+  top:0px;
+  font-size: 100%;
+  height: 100%;
+  width:100%;
+  font-family: funnel;
+  background-color: var(--bodycolor);
+  color:var(--textcolormain);
+  overflow-x: hidden;
+}
+@media screen and (min-width: 900px) {
+  body {
+    --widtha:calc(100vw - 900px);
+    margin-left: calc(var(--widtha) / 2);
+    max-width: 900px;
+  }
+}
+@font-face {
+   font-family: science;
+  src: url(fonts/Science_Gothic/ScienceGothic-VariableFont_CTRS,slnt,wdth,wght.ttf);
+}
+.science{
+  font-family: science;
+}
+@font-face {
+   font-family: dosis;
+  src: url(fonts/Dosis/Dosis-VariableFont_wght.ttf);
+}
+.dosis{
+  font-family: dosis;
+}
+@font-face {
+   font-family: poire;
+  src: url(fonts/poiretone.ttf);
+}
+.poire{
+  font-family: poire;
+}
+.maintext{
+  color:var(--textcolormain)
+}
+.fullfill{
+  display: flex;
+  height:100%;
+  width:100%;
+  min-height: 0;
+}
+.center{
+  margin:auto;
+  text-align: center;
+}
+.navbar{
+  position: relative;
+  height:7%;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3em;
+  padding: 1%;
+  box-sizing: border-box;
+  background-color: var(--bodycolor);
+  color:var(--textcolormain);
+}
+.left{
+  display: flex;
+  align-content: flex-start;
+  width:100%;
+}
+.menuborder{
+  border-right: 2px solid var(--textcolormain);
+}
+.navitemsmall{
+  display: flex;
+  aspect-ratio:1/1;
+}
+.menuclip{
+  background-color:var(--logocolor);
+  height:50%;
+  width:50%;
+  clip-path:polygon(10.0% 31.0%,10.4% 10.2%,91.0% 10.0%,91.0% 31.0%,10.0% 31.0%,10.0% 41.0%,10.0% 59.0%,91.0% 59.0%,91.0% 41.0%,10.0% 41.0%,10.0% 31.0%,10.0% 69.0%,91.0% 69.0%,
+    90.6% 89.0%,10.0% 89.0%,10.2% 69.0%,10.0% 31.0%);
+}
+
+
+/* -----------------------------Button styleing------------------------- */
+.batterybutton{
+  box-sizing: border-box;
+  margin:auto;
+  height: 90%;
+  width:96%;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  overflow: hidden;
+}
+.batterybuttonbackwards{
+  box-sizing: border-box;
+  margin:auto;
+  height: 90%;
+  width:96%;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  overflow: hidden;
+}
+.clipstyle{
+  height:65%;
+  margin:auto;
+  aspect-ratio:1/1;
+}
+.batterytext{
+  font-size: .9em;
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+}
+.batterytopcolor{
+  background-color: #2E2E2E;
+}
+.battextcolor{
+  color:#2E2E2E;
+}
+/* -----butt end------ */
