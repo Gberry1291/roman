@@ -1,7 +1,11 @@
 :root {
-  --bodycolor: #141414;
-  --logocolor: #FFFFFF;
-  --textcolormain:#FFFFFF;
+  --bodycolor: white;
+  --logocolor: #041854;
+  --textcolormain:#041854;
+  --textcolortwo:#C00021;
+  --textcolorthree:white;
+  --buttonone:#041854;
+  --buttontwo:#C00021;
 }
 a{
   color:inherit;
@@ -21,6 +25,16 @@ body{
   background-color: var(--bodycolor);
   color:var(--textcolormain);
   overflow-x: hidden;
+}
+.backgroundimage{
+  position: absolute;
+  background-image: url("propics/capeback.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  width:100%;
+  aspect-ratio:2 /3;
+  opacity: .8;
 }
 @media screen and (min-width: 900px) {
   body {
@@ -53,6 +67,12 @@ body{
 .maintext{
   color:var(--textcolormain)
 }
+.twotext{
+  color:var(--textcolortwo)
+}
+.threetext{
+  color:var(--textcolorthree)
+}
 .fullfill{
   display: flex;
   height:100%;
@@ -63,6 +83,11 @@ body{
   margin:auto;
   text-align: center;
 }
+.centerleft{
+  margin-top:auto;
+  margin-bottom: auto;
+  margin-left:7%;
+}
 .navbar{
   position: relative;
   height:7%;
@@ -72,7 +97,6 @@ body{
   font-size: 1.3em;
   padding: 1%;
   box-sizing: border-box;
-  background-color: var(--bodycolor);
   color:var(--textcolormain);
 }
 .left{
@@ -94,14 +118,31 @@ body{
   clip-path:polygon(10.0% 31.0%,10.4% 10.2%,91.0% 10.0%,91.0% 31.0%,10.0% 31.0%,10.0% 41.0%,10.0% 59.0%,91.0% 59.0%,91.0% 41.0%,10.0% 41.0%,10.0% 31.0%,10.0% 69.0%,91.0% 69.0%,
     90.6% 89.0%,10.0% 89.0%,10.2% 69.0%,10.0% 31.0%);
 }
-
+.slide{
+  position: absolute;
+  width:0%;
+  height:93%;
+  top:7%;
+  z-index: 10;
+  background-color: white;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+  transition: width 1s;
+  overflow: hidden;
+}
+.slideitem{
+  color:black;
+}
+.slideon{
+  width:100%;
+}
 
 /* -----------------------------Button styleing------------------------- */
 .batterybutton{
   box-sizing: border-box;
   margin:auto;
-  height: 90%;
-  width:96%;
+  height: 100%;
+  width:100%;
   border-radius: 10px;
   display: grid;
   grid-template-columns: 25% 75%;
@@ -110,8 +151,8 @@ body{
 .batterybuttonbackwards{
   box-sizing: border-box;
   margin:auto;
-  height: 90%;
-  width:96%;
+  height: 100%;
+  width:100%;
   border-radius: 10px;
   display: grid;
   grid-template-columns: 75% 25%;
@@ -128,7 +169,7 @@ body{
   overflow: hidden;
 }
 .batterytopcolor{
-  background-color: #2E2E2E;
+  background-color: var(--textcolormain);
 }
 .battextcolor{
   color:#2E2E2E;

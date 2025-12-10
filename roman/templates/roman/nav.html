@@ -20,17 +20,50 @@
           <div class="center menuclip"></div>
         </div>
 
-        <a class="navitem fullfill" href="{% url 'home' %}">
-          <div class="center science">
-            Lead a Generation
+
+        {% if request.get_full_path == '/' %}
+          <div class="navitem fullfill">
+            <div class="center science">
+              Lead a Generation
+            </div>
           </div>
-        </a>
+        {% else %}
+          <a class="navitem fullfill" href="{% url 'home' %}">
+            <div class="center science">
+              Lead a Generation
+            </div>
+          </a>
+        {% endif %}
+
 
       </div>
-
     </div>
+
+    <div class="backgroundimage"></div>
+
+    <div id="slide" class="slide">
+      <div class="fullfill slideitem">
+        <div class="centerleft">Booking Calander</div>
+      </div>
+      <div class="fullfill slideitem">
+        <div class="centerleft">Contact</div>
+      </div>
+      <div class="fullfill slideitem">
+        <div class="centerleft">About Roman</div>
+      </div>
+      <div class="fullfill slideitem">
+        <div class="centerleft">About Astrid</div>
+      </div>
+      <div class="fullfill slideitem">
+        <div class="centerleft">Goal</div>
+      </div>
+    </div>
+
 
 {% block pregroup %}{% endblock %}
 
   </body>
+
+<script type="text/javascript" src="{% static 'roman/js/nav.js' %}"></script>
+
 </html>

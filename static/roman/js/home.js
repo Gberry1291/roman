@@ -57,3 +57,22 @@ function startbar(){
   },8000,function(){nextquote()})
 }
 startbar()
+
+function makesound(){
+  $("#sound").animate({
+    "height":"5.9vh",
+    "top":"-=.8vh",
+    "left":"-=.8vh",
+    "opacity":"0"
+  },800,function(){
+    $("#sound").css({
+      "height":"4.55vh",
+      "top":"17.5%",
+      "left":"+=.8vh",
+      "transform": 'rotate('+Math.floor(Math.random() * (359 - 1 + 1)) + 1+'deg)',
+      "opacity":"1"
+      })
+      makesound()
+    })
+}
+makesound()
