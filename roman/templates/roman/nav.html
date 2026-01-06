@@ -42,9 +42,11 @@
     <div class="backgroundimage"></div>
 
     <div id="slide" class="slide">
-      <div class="fullfill slideitem">
+
+      <{% if request.get_full_path == '/calander' %}div{% else %}a href="{% url 'calander' %}"{% endif %} class="fullfill slideitem"">
         <div class="centerleft">Booking Calander</div>
-      </div>
+      </{% if request.get_full_path == '/calander' %}div{% else %}a{% endif %}>
+
       <div class="fullfill slideitem">
         <div class="centerleft">Contact</div>
       </div>

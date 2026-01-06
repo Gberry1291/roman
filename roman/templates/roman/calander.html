@@ -1,0 +1,108 @@
+{% extends 'roman/nav.html' %}
+{% load static %}
+
+{% block pregroup %}
+
+  <link rel="stylesheet" href="{% static 'roman/css/calander.css' %}">
+
+  <div class="legendhouse">
+    <div class="fullfill togguide">
+      <div class="batterybutton batterytopcolor">
+        <div class="fullfill batterytopcolor">
+          <div class="clipstyle bookclip free"></div>
+        </div>
+        <div class="fullfill batterybodyclip free">
+          <div id="batterytextoption" class="center batterytext battextcolor">
+            {{language.guide}}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% if user.is_authenticated %}
+      <div class="fullfill togevent">
+        <div class="removebutton deletefoodbutton">
+          <div class="fullfill trashhouse">
+            <div class="traschcan"></div>
+          </div>
+          <div class="fullfill removehouse">
+            <div class="center removetext addevent">{{language.addevent}}</div>
+          </div>
+        </div>
+      </div>
+    {% else %}
+      <div class="fullfill">
+        <div class="removebutton deletefoodbutton">
+          <div class="fullfill trashhouse">
+            <div class="traschcan"></div>
+          </div>
+          <div class="fullfill removehouse">
+            <div class="center removetext" id="addeventnot">{{language.addeventnot}}</div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="calendar-container">
+
+    <div class="calanderhead calitem">
+      <div id="calendar-prev" class="calendar-navigation fullfill">
+        <div class="arrowhouse">
+          <div class="center arrowclip arrowleft"></div>
+        </div>
+      </div>
+
+      <div class="fullfill">
+        <p class="center calendar-current-date"></p>
+      </div>
+
+      <div id="calendar-next" class="calendar-navigation fullfill">
+        <div class="arrowhouse">
+          <div class="center arrowclip"></div>
+        </div>
+      </div>
+    </div>
+
+      <div class="calendar-body">
+          <div class="calendar-weekdays fullfill">
+              <li class="fullfill"><div class="center" id="sun">{{language.sun}}</div></li>
+              <li class="fullfill"><div class="center" id="mon">{{language.mon}}</div></li>
+              <li class="fullfill"><div class="center" id="tue">{{language.tue}}</div></li>
+              <li class="fullfill"><div class="center" id="wed">{{language.wed}}</div></li>
+              <li class="fullfill"><div class="center" id="thu">{{language.thu}}</div></li>
+              <li class="fullfill"><div class="center" id="fri">{{language.fri}}</div></li>
+              <li class="fullfill"><div class="center" id="sat">{{language.sat}}</div></li>
+          </div>
+          <div id="caldates" class="calendar-dates"></div>
+      </div>
+  </div>
+
+
+{{ daylist|json_script:"alldays" }}
+
+  <div class="daypage" id="daypage">
+    <div class="neweventhouse">
+      <div class="topbar">
+        <div class="x togday"><div class="xclip"></div></div>
+        <div class="removebutton eventhousebutton">
+          <div class="fullfill trashhouse">
+            <div class="saveclip"></div>
+          </div>
+          <div id="savedaychanges" class="fullfill removehouse">
+            <div class="center removetext savechanges">Set Appointment</div>
+          </div>
+        </div>
+      </div>
+      <div class="daypagebody">
+        <input class="appinput" placeholder="Your Name"  type="text" id="appname" name="appname" value="">
+        <input class="appinput" placeholder="Your Email"  type="email" id="appemail" name="appemail" value="">
+        <input class="appinput" placeholder="Time you want to reserve"  type="text" id="apptime" name="apptime" value="">
+        <input class="appinputbig" placeholder="Message to Roman And Astrid ( optional )" type="text" id="appmessage" name="appmessage" value="">
+      </div>
+    </div>
+  </div>
+
+
+<script type="text/javascript" src="{% static 'roman/js/calander.js' %}"></script>
+
+  {% endblock %}

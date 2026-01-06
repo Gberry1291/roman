@@ -14,7 +14,8 @@
 }
 .quotemargin{
   margin-left:5%;
-  width:60%;
+  width:90%;
+  font-size: 1.3em;
 }
 .left{
   text-align: left;
@@ -32,11 +33,13 @@
   background-color: green;
 }
 #quotes{
-  height:15%;
+  min-height: 15%;
+  margin-top: 15%;
 }
 #loading{
   background-color: white;
   height:1%;
+  margin-bottom: 15%;
 }
 #loadingbar{
   background-color: #BABABA;
@@ -195,4 +198,260 @@
 }
 .pi5{
   background-image: url("propics/point5.png");
+}
+.button{
+  margin-left: 10%;
+  margin-right: 10%;
+  width:80%;
+  background-color: var(--logocolor);
+  border-radius: 5px;
+}
+.buttontext{
+  margin: 20%;
+  padding-top:6%;
+  padding-bottom:6%;
+  color:var(--textcolorthree);
+  text-align: center;
+  font-size:1.1em;
+  width:60%;
+}
+.advicehouse{
+  width:92%;
+  margin-left:4%;
+  margin-right:4%;
+  background-color:#1D318F;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.adviceimage{
+  width:100%;
+  aspect-ratio:1.5/ 1;
+  background-image: url("propics/advice.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.advicetext1{
+  margin:10%;
+  color:white;
+  width:80%;
+  text-align: center;
+}
+.advicetext2{
+  margin-left: 7%;
+  margin-right: 7%;
+  font-size: 1.2em;
+  color:#85ACFF;
+  text-align: center;
+}
+.advicecard{
+  width:100%;
+  margin-top:7%;
+  display:grid;
+  grid-template-columns: 20% 80%;
+}
+.adviceimg{
+  width:80%;
+  aspect-ratio:1/1;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.adv1{
+  background-image: url("propics/advice1.png");
+}
+.adv2{
+  background-image: url("propics/advice2.png");
+}
+.adv3{
+  background-image: url("propics/advice3.png");
+}
+.advicecardtext{
+  width:90%;
+  margin-left:5%;
+  color:white;
+  font-size: .9em;
+}
+.advicebutton{
+  margin:10%;
+  width:70%;
+  padding:5%;
+  border-radius: 5px;
+  border:4px solid var(--textcolorthree);
+}
+.advicebuttontext{
+  margin:auto;
+  color:var(--textcolorthree);
+  text-align: center;
+  font-size:1.1em;
+}
+
+.podhouse{
+  border-radius: 30px;
+  border:2px solid black;
+  background-color: #FFE7E7;
+  width:94%;
+  margin-top:20%;
+  margin-bottom: 20%;
+  margin-left:3%;
+  text-align: center;
+  color:black;
+}
+.podtitle{
+  font-size: 1.5em;
+  width:80%;
+  margin-left:10%;
+  margin-top:5%;
+}
+.minipodtitle{
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.podbody{
+  margin:5%;
+  line-height: 30px;;
+}
+.optionhouse{
+  width:100%;
+  margin-bottom:5%;
+}
+.opttitle{
+  font-weight: bold;
+}
+.listonitem{
+  margin-left:5%;
+  width:90%;
+  height:8vh;
+  border:1px solid black;
+  border-radius: 20px;
+  margin-bottom: 5%;
+  background-color: white;
+}
+.listenitemimg{
+  margin-left:3vw;
+  margin-top: 3vw;
+  height:calc(100% - 6vw);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+.listens{
+  background-image: url("propics/listenons.png");
+  aspect-ratio: 4 / 1;
+}
+.listeny{
+  background-image: url("propics/listenony.png");
+  aspect-ratio: 6.7 / 1;
+}
+
+.lasthouse{
+  margin-top:5%;
+  background-color: var(--logocolor);
+  color:white;
+}
+.lasttitle{
+  font-size:1.5em;
+  text-align: center;
+  padding-top:10%;
+  margin-bottom: 10%;
+  font-weight: bolder;
+  margin-left: 5%;
+  margin-right: 5%;
+  width:90%;
+}
+.lastminititle{
+  margin-left: 5%;
+  color: var(--textcolortwo);
+  font-weight: bold;
+}
+.lastinfo{
+  margin:4%;
+}
+.lastinput{
+  margin-bottom:3%;
+  margin-left:5%;
+  margin-right: 5%;
+  height: 7vh;
+  width:90%;
+  font-size: 1.2em;
+  color:black;
+}
+.lastbutton{
+  display: flex;
+  background-color: #FFE7E7;
+  border-radius: 40px;
+  width:90%;
+}
+.fineprint{
+  margin-bottom:5%;
+  margin-left:5%;
+  margin-right: 5%;
+  font-size:.7em;
+}
+
+.stickyhouse{
+  position: fixed;
+  bottom:1%;
+  height:6%;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+.shieldhouse{
+  height: 100%;
+  aspect-ratio: 1/1;
+  margin-left: 5%;
+  background-color: #00A2E8;
+  border-radius: 10px;
+}
+.shield{
+  position: relative;
+  height: 80%;
+  width:80%;
+  left:10%;
+  top:10%;
+  background-color: white;
+}
+.qhouse{
+  position: relative;
+  height:100%;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  float:right;
+  margin-right: 5%;
+}
+.qtext{
+  margin:10%;
+  font-size: .8em;
+  color:black;
+  height:80%;
+  font-weight: bold;
+}
+.bubble{
+  position: relative;
+  top:10%;
+  height: 80%;
+  aspect-ratio: 1/1;
+  background-color: black;
+}
+.shieldclip{
+  clip-path:polygon(
+11.0% 18.0%,14.0% 18.0%,18.0% 18.0%,20.8% 17.4%,24.0% 17.0%,27.0% 16.0%,31.0% 15.0%,34.0% 14.0%,36.6% 12.8%,39.0% 12.0%,41.4% 10.4%,43.8% 8.6%,45.4% 7.0%,46.6% 5.8%,48.0% 5.0%,50.0% 3.0%,
+51.0% 4.0%,52.0% 6.0%,54.0% 7.0%,55.6% 8.4%,58.0% 10.0%,60.4% 11.4%,63.0% 13.0%,66.0% 14.0%,69.0% 15.0%,72.0% 16.0%,74.0% 16.2%,78.0% 17.2%,81.0% 18.0%,85.0% 18.0%,89.0% 18.0%,89.0% 20.0%,
+89.0% 26.0%,89.0% 28.0%,89.0% 32.0%,89.0% 36.0%,87.8% 42.0%,86.4% 47.0%,85.8% 51.0%,84.0% 56.0%,82.0% 61.0%,81.0% 64.0%,78.4% 68.0%,76.4% 71.0%,73.2% 75.0%,69.0% 80.8%,66.0% 84.0%,62.4% 87.0%,
+60.2% 89.0%,57.0% 92.0%,54.0% 94.0%,50.0% 96.0%,46.6% 94.0%,42.0% 91.0%,38.0% 89.0%,33.8% 85.6%,31.0% 83.0%,28.0% 79.0%,24.8% 74.4%,22.0% 70.0%,19.0% 65.0%,17.0% 61.0%,15.4% 56.0%,14.0% 52.0%,
+12.2% 47.0%,11.6% 42.0%,11.0% 37.0%,10.0% 32.0%,10.0% 28.0%,10.0% 24.0%,10.0% 20.0%,33.0% 50.0%,50.0% 59.6%,74.8% 35.0%,73.0% 33.0%,49.8% 56.0%,34.8% 47.8%,33.0% 50.0%,10.0% 20.0%,11.0% 18.0%
+    );
+    background-color: white;
+}
+.bubbleclip{
+  clip-path:polygon(
+22.0% 95.0%,20.6% 77.0%,18.0% 75.0%,13.2% 72.0%,9.6% 67.8%,6.6% 63.0%,4.0% 58.0%,2.0% 53.0%,1.6% 49.0%,1.6% 41.0%,2.6% 36.0%,4.0% 31.0%,6.0% 27.0%,8.8% 22.8%,12.0% 19.0%,15.6% 15.6%,
+18.4% 13.2%,22.0% 11.0%,27.0% 8.6%,31.8% 6.6%,37.0% 5.0%,42.0% 4.0%,46.0% 4.0%,54.0% 4.0%,60.0% 4.8%,66.0% 6.0%,71.0% 8.0%,76.0% 10.6%,80.0% 13.0%,83.4% 15.6%,86.0% 18.0%,
+89.0% 21.0%,91.4% 24.8%,94.0% 29.0%,96.0% 35.0%,97.0% 38.0%,97.0% 44.0%,97.0% 49.0%,96.0% 53.0%,95.2% 56.0%,94.0% 59.0%,93.0% 62.0%,90.6% 65.8%,88.0% 69.0%,85.0% 72.0%,82.0% 74.8%,
+78.2% 77.2%,75.0% 79.0%,71.2% 80.8%,67.0% 83.0%,62.0% 84.0%,58.0% 84.6%,53.0% 85.0%,45.0% 85.0%,42.0% 85.0%,40.0% 85.0%,24.0% 96.0%,22.0% 95.0%,24.0% 93.0%,40.0% 82.0%,42.0% 82.8%,
+45.0% 83.0%,52.0% 83.0%,57.0% 82.8%,62.0% 82.0%,66.0% 81.0%,71.0% 78.2%,75.0% 76.6%,79.0% 74.0%,83.0% 71.0%,86.8% 66.8%,90.6% 61.2%,92.2% 57.0%,93.6% 54.0%,95.0% 50.0%,95.6% 42.0%,
+95.0% 38.0%,93.4% 33.0%,91.6% 29.0%,88.8% 24.0%,86.0% 21.0%,83.0% 18.0%,79.8% 15.2%,75.0% 12.0%,69.0% 9.6%,65.0% 8.0%,61.0% 7.0%,56.0% 6.0%,53.0% 6.0%,45.0% 6.0%,38.0% 7.0%,
+33.0% 8.0%,28.0% 10.0%,22.0% 13.0%,17.0% 17.0%,14.0% 20.0%,11.0% 23.0%,8.8% 27.0%,6.2% 31.0%,5.0% 35.0%,4.0% 38.0%,3.4% 43.0%,3.8% 48.0%,4.8% 54.0%,7.0% 59.0%,9.4% 64.0%,12.8% 68.2%,
+16.0% 71.0%,20.0% 74.0%,22.4% 75.6%,22.8% 94.2%
+    )
 }

@@ -58,6 +58,26 @@ function startbar(){
 }
 startbar()
 
+let lastKnownScrollPosition = 0;
+let scrolling=0;
+document.addEventListener("scroll",(event)=>{
+  if (scrolling==0) {
+    scrolling=1;
+    setTimeout(fadesticky,1000)
+  }
+  lastKnownScrollPosition = Math.round(window.scrollY) ;
+})
+function fadesticky(){
+  if (lastKnownScrollPosition>50) {
+    $("#stickyhouse").animate({
+      "opacity":"0"
+    },800,function(){scrolling=0})
+  }else{
+    $("#stickyhouse").animate({
+      "opacity":"1"
+    },800,function(){scrolling=0})
+  }
+}
 function makesound(){
   $("#sound").animate({
     "height":"5.9vh",
@@ -75,4 +95,4 @@ function makesound(){
       makesound()
     })
 }
-makesound()
+// makesound()
