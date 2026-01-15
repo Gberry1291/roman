@@ -6,6 +6,14 @@ slideables.forEach((item, i) => {
   })
 });
 
+const questionables=document.querySelectorAll(".togquestion")
+questionables.forEach((item, i) => {
+  item.addEventListener("click",function(){
+    document.getElementById("questionhouse").classList.toggle("questionon")
+  })
+});
+
+
 var startpat=window.location.href
 let pattern=/\S*\/\/\S+?(?=\/)/
 var extension=startpat.match(pattern)[0];

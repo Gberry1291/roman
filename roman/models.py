@@ -38,3 +38,14 @@ class Day(models.Model):
 
     class Meta:
         ordering = ['date']
+
+class NewsLetter(models.Model):
+
+    name= models.CharField(max_length=None)
+    email= models.EmailField(max_length=254)
+
+    def save(self,*args,**kwargs):
+        super().save(*args,**kwargs)
+
+    class Meta:
+        ordering = ['email']

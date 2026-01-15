@@ -7,7 +7,7 @@
     <title></title>
   </head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="theme-color" content="#C4A4E4">
+  <meta name="theme-color" content="#041854">
   <link rel="shortcut icon" type="image/png" href="{% static 'roman/favicon/microphone.png' %}"/>
   <link rel="stylesheet"  href="{% static 'roman/css/nav.css' %}">
   <script src="{% static 'roman\jquery-3.6.0.min.js' %}"></script>
@@ -24,13 +24,13 @@
         {% if request.get_full_path == '/' %}
           <div class="navitem fullfill">
             <div class="center science">
-              Lead a Generation
+              Führung echt jetzt
             </div>
           </div>
         {% else %}
           <a class="navitem fullfill" href="{% url 'home' %}">
             <div class="center science">
-              Lead a Generation
+              Führung echt jetzt
             </div>
           </a>
         {% endif %}
@@ -43,24 +43,99 @@
 
     <div id="slide" class="slide">
 
-      <{% if request.get_full_path == '/calander' %}div{% else %}a href="{% url 'calander' %}"{% endif %} class="fullfill slideitem"">
-        <div class="centerleft">Booking Calander</div>
-      </{% if request.get_full_path == '/calander' %}div{% else %}a{% endif %}>
+      {% if request.get_full_path != '/calander' %}
+        <a href="{% url 'calander' %}" class="buttonitem">
+          <div class="slidebutton">
+            <div class="center">
+              Buchen Sie eine Sitzung
+            </div>
+          </div>
+        </a>
+      {% endif %}
 
-      <div class="fullfill slideitem">
-        <div class="centerleft">Contact</div>
-      </div>
-      <div class="fullfill slideitem">
-        <div class="centerleft">About Roman</div>
-      </div>
-      <div class="fullfill slideitem">
-        <div class="centerleft">About Astrid</div>
-      </div>
-      <div class="fullfill slideitem">
+      {% if request.get_full_path != '/' %}
+        <a href="{% url 'home' %}" class="slideitem">
+          <div class="centerleft">Heim</div>
+        </a>
+      {% endif %}
+
+        <a href="https://open.spotify.com/show/4iq1Jm6HvznLWruUzlsNXU" class="slideitem">
+          <div class="centerleft">Podcast</div>
+        </a>
+
+      {% if request.get_full_path != '/contact' %}
+        <a href="{% url 'contact' %}" class="slideitem">
+          <div class="centerleft">Kontaktieren</div>
+        </a>
+      {% endif %}
+
+      {% if request.get_full_path != '/about' %}
+        <a href="{% url 'about' %}" class="slideitem">
+          <div class="centerleft">Über uns</div>
+        </a>
+      {% endif %}
+
+      <!-- <div class="slideitem">
         <div class="centerleft">Goal</div>
-      </div>
+      </div> -->
     </div>
 
+<div id="questionhouse" class="questionhouse">
+  <div class="closehouse">
+    <div class="closebutton togquestion">
+      <div class="closetext">Schließen</div>
+      <div class="closeclip"></div>
+    </div>
+  </div>
+  <div class="qbody">
+    <div class="fullfill qhead">
+      <div class="fullfill bolder">
+        <p class="center">Haben Sie eine Frage?</p>
+      </div>
+      <div class="fullfill">
+        <p class="center faint">Unser Team ist für Sie da.</p>
+      </div>
+    </div>
+    <div class="fullfill">
+      <div class="emailgrid">
+        <div class="fullfill item1">
+          <div class="iconhouse">
+            <div class="iconclip"></div>
+          </div>
+        </div>
+        <div class="fullfill item2">
+          <div class="lefttext bolder">
+            Senden Sie uns eine E-Mail
+          </div>
+        </div>
+        <div class="fullfill item3">
+          <div class="lefttext faint">
+            Wir antworten in der Regel innerhalb weniger Stunden.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="smallinput">
+      <label class="labeltext faint" for="nameinput">Ihr Name</label>
+      <input class="inputsingle" type="text" id="nameinput" name="nameinput" value="">
+    </div>
+    <div class="smallinput">
+      <label class="labeltext faint" for="emailinput">Ihre E-Mail-Adresse (Rechtschreibung bitte prüfen)</label>
+      <input class="inputsingle" type="text" id="emailinput" name="emailinput" value="">
+    </div>
+    <div class="smallinput">
+      <label class="labeltext faint" for="emailinput">Wie können wir helfen?</label>
+      <input class="inputdouble" type="text" id="emailinput" name="emailinput" value="">
+    </div>
+    <div class="fullfill">
+      <div class="subbutt">
+        <div class="center">
+          Jetzt E-Mail senden
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% block pregroup %}{% endblock %}
 

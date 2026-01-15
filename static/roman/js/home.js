@@ -68,7 +68,7 @@ document.addEventListener("scroll",(event)=>{
   lastKnownScrollPosition = Math.round(window.scrollY) ;
 })
 function fadesticky(){
-  if (lastKnownScrollPosition>50) {
+  if (lastKnownScrollPosition>400) {
     $("#stickyhouse").animate({
       "opacity":"0"
     },800,function(){scrolling=0})
@@ -94,5 +94,26 @@ function makesound(){
       })
       makesound()
     })
+}
+
+document.getElementById("newsletter").addEventListener("click",addToEmailList)
+function addToEmailList(){
+
+
+    let name=document.getElementById('newslettername').value
+    let email=document.getElementById('newsletteremail').value
+
+    let newperson={"name":name,"email":email}
+
+    path=extension+"/mailinglist"
+    whattosend=JSON.stringify(newperson)
+
+    setreq()
+    fetch(newreq).then(function(response) {
+      return response.json()
+    }).then(function(x) {
+      alert(x["message"])
+    });
+
 }
 // makesound()

@@ -4,11 +4,27 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponse,JsonResponse,HttpResponseRedirect
 from django.core import serializers
 from django.conf import settings
-from roman.models import Day
+from roman.models import Day, NewsLetter
 import json
 
 class Homepage(TemplateView):
     template_name= 'roman/home.html'
+    def get(self, request):
+
+
+        args = {}
+        return render(request,self.template_name,args)
+
+class Contactpage(TemplateView):
+    template_name= 'roman/contact.html'
+    def get(self, request):
+
+
+        args = {}
+        return render(request,self.template_name,args)
+
+class Aboutpage(TemplateView):
+    template_name= 'roman/about.html'
     def get(self, request):
 
 
@@ -63,5 +79,26 @@ class SaveDay(TemplateView):
             daydic[endtime]={"date":endtime,"closed":day.closed}
 
         response=JsonResponse(daydic)
+
+        return response
+
+class MailingList(TemplateView):
+    template_name = 'orange/home.html'
+    def post(self,request):
+
+        decodedword=json.loads(request.body.decode('ascii'))
+        thename=decodedword["name"]
+        theemail=decodedword["email"]
+
+        message={"message":"Sie wurden in unsere Mailingliste aufgenommen, vielen Dank fürs Zuhören!"}
+
+        try:
+            newguy=NewsLetter.objects.get(email=theemail)
+            message={"message":"Sie sind bereits für unseren Newsletter angemeldet!"}
+        except ObjectDoesNotExist:
+            newguy=NewsLetter(name=thename,email=theemail)
+            newguy.save()
+
+        response=JsonResponse(message)
 
         return response
