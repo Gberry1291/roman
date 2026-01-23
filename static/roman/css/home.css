@@ -85,12 +85,6 @@
   margin:auto;
   background-size: contain;
 }
-.astrid{
-  background-image: url("propics/astrid.png");
-}
-.roman{
-  background-image: url("propics/roman.jpg");
-}
 .bookclip{
   background-color: black;
   clip-path:polygon(
@@ -203,14 +197,14 @@
   background-image: url("propics/point5.png");
 }
 .button{
-  margin-left: 10%;
-  margin-right: 10%;
+  display: flex;
+  margin:10%;
   width:80%;
   background-color: var(--logocolor);
   border-radius: 5px;
 }
 .buttontext{
-  margin: 20%;
+  margin: auto;
   padding-top:6%;
   padding-bottom:6%;
   color:var(--textcolorthree);
@@ -225,11 +219,11 @@
   background-color:#1D318F;
   border-radius: 10px;
   overflow: hidden;
+  padding-bottom:5%;
 }
 .adviceimage{
   width:100%;
   aspect-ratio:1.5/ 1;
-  background-image: url("propics/advice.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -320,6 +314,7 @@
   font-weight: bold;
 }
 .listonitem{
+  display: flex;
   margin-left:5%;
   width:90%;
   height:8vh;
@@ -329,20 +324,18 @@
   background-color: white;
 }
 .listenitemimg{
-  margin-left:3vw;
-  margin-top: 3vw;
-  height:calc(100% - 6vw);
+  height:90%;
+  margin:auto;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: white;
+  aspect-ratio: 4 / 1;
 }
 .listens{
   background-image: url("propics/listenons.png");
-  aspect-ratio: 4 / 1;
 }
 .listeny{
   background-image: url("propics/listenony.png");
-  aspect-ratio: 6.7 / 1;
 }
 
 .lasthouse{
@@ -363,7 +356,7 @@
 }
 .lastminititle{
   margin-left: 5%;
-  color: var(--textcolortwo);
+  color: var(--redcolor);
   font-weight: bold;
 }
 .lastinfo{

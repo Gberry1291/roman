@@ -58,7 +58,7 @@
 </div>
 
 <div class="titletext wirsind center science">
-  Wer Wir Sind:
+  {{bodytext.1.text}}
 </div>
 
 <div class="card one">
@@ -68,24 +68,24 @@
     </div>
     <div class="fullfill attributes dosis">
       <div class="fullfill">
-        <div class="center">-Co-Bereichsleitung Wohnen</div>
+        <div class="center">{{bodytext.2.text}}</div>
       </div>
       <div class="fullfill">
-        <div class="center">-Master-Abschluss</div>
+        <div class="center">{{bodytext.3.text}}</div>
       </div>
       <div class="fullfill">
-        <div class="center">-Mutter</div>
+        <div class="center">{{bodytext.4.text}}</div>
       </div>
     </div>
   </div>
   <div class="fullfill">
-    <div class="pic astrid"></div>
+    <img class="pic" src="/static{{ pics.astrid }}" alt="">
   </div>
 </div>
 
 <div class="card two">
   <div class="fullfill">
-    <div class="pic roman"></div>
+    <img class="pic" src="/static{{ pics.roman }}" alt="">
   </div>
   <div class="fullfill texthouse">
     <div class="fullfill">
@@ -93,13 +93,13 @@
     </div>
     <div class="fullfill attributes dosis">
       <div class="fullfill">
-        <div class="center">-stv. Direktor</div>
+        <div class="center">{{bodytext.5.text}}</div>
       </div>
       <div class="fullfill">
-        <div class="center">-Vater</div>
+        <div class="center">{{bodytext.6.text}}</div>
       </div>
       <div class="fullfill">
-        <div class="center">-President of Magic Club Thun</div>
+        <div class="center">{{bodytext.7.text}}</div>
       </div>
     </div>
   </div>
@@ -108,10 +108,10 @@
 
 <div class="point">
   <div class="fullhead">
-    <div class="headtext maintext">Beginnen Sie Ihre Entwicklung</div>
+    <div class="headtext maintext">{{bodytext.8.text}}</div>
   </div>
   <div class="pointbody twotext">
-    Führung prägt alles – Ihre Arbeit, Ihre Beziehungen und die Ergebnisse, die Sie erzielen. In unserem Podcast und unseren Angeboten vermitteln wir Ihnen anhand praktischer Erfahrungen klare und hilfreiche Anleitungen, die Sie dabei unterstützen, effektiver und authentischer zu führen. Wenn Sie bereit sind, sich weiterzuentwickeln, neue Herausforderungen anzunehmen und einen echten Unterschied zu machen, dann sind Sie hier genau richtig, um Ihre Führungskompetenzen zu vertiefen.
+    {{bodytext.9.text}}
   </div>
 </div>
 
@@ -122,11 +122,11 @@
       <div class="center pointimg pi1"></div>
     </div>
     <div class="fullfill">
-      <div class="center headtext maintext">Vision-Einstellung</div>
+      <div class="center headtext maintext">{{bodytext.10.text}}</div>
     </div>
   </div>
   <div class="pointbody twotext">
-    Wirksame Führung vermittelt ein klares Zielbewusstsein und einen Sinn für Zweckmäßigkeit. Führungskräfte helfen Teams, die langfristigen Ziele und deren Bedeutung zu verstehen, und ermöglichen so koordiniertes und motiviertes Handeln.
+    {{bodytext.11.text}}
   </div>
 </div>
 
@@ -136,11 +136,11 @@
       <div class="center pointimg pi2"></div>
     </div>
     <div class="fullfill">
-      <div class="center headtext maintext">Entscheidungsklarheit</div>
+      <div class="center headtext maintext">{{bodytext.12.text}}</div>
     </div>
   </div>
   <div class="pointbody twotext">
-    Starke Führungskräfte treffen fundierte und zeitnahe Entscheidungen, die Unsicherheit reduzieren. Ihre Entscheidungen helfen Teams, auch in komplexen oder sich schnell verändernden Situationen fokussiert und zuversichtlich zu bleiben.
+    {{bodytext.13.text}}
   </div>
 </div>
 
@@ -150,11 +150,11 @@
       <div class="center pointimg pi3"></div>
     </div>
     <div class="fullfill">
-      <div class="center headtext maintext">Motivationsschub</div>
+      <div class="center headtext maintext">{{bodytext.14.text}}</div>
     </div>
   </div>
   <div class="pointbody twotext">
-    Führung inspiriert Menschen dazu, ihr Bestes zu geben. Indem Führungskräfte Anstrengungen anerkennen, Vertrauen fördern und ein positives Umfeld schaffen, steigern sie sowohl die Arbeitsmoral als auch die Leistung.
+    {{bodytext.15.text}}
   </div>
 </div>
 
@@ -164,11 +164,11 @@
       <div class="center pointimg pi4"></div>
     </div>
     <div class="fullfill">
-      <div class="center headtext maintext">Teamzusammenhalt</div>
+      <div class="center headtext maintext">{{bodytext.16.text}}</div>
     </div>
   </div>
   <div class="pointbody twotext">
-    Gute Führungskräfte vereinen unterschiedliche Persönlichkeiten um gemeinsame Ziele. Sie fördern die Zusammenarbeit, lösen Konflikte und schaffen eine Kultur, in der sich die Menschen wertgeschätzt und verbunden fühlen.
+    {{bodytext.17.text}}
   </div>
 </div>
 
@@ -178,56 +178,56 @@
       <div class="center pointimg pi5"></div>
     </div>
     <div class="fullfill">
-      <div class="center headtext maintext">Leitfaden zur Anpassungsfähigkeit</div>
+      <div class="center headtext maintext">{{bodytext.18.text}}</div>
     </div>
   </div>
   <div class="pointbody twotext">
-    Führungskräfte helfen Teams, Veränderungen stabil und souverän zu bewältigen. Sie antizipieren Herausforderungen, passen Strategien an und ermutigen andere, neue Chancen zu ergreifen.
+    {{bodytext.19.text}}
   </div>
 </div>
 
-<div id="consultation" class="button">
-  <p class="buttontext science">Kostenlose Beratung</p>
-</div>
+<a href="{% url 'calander' %}" id="consultation" class="button">
+  <p class="buttontext science">{{bodytext.20.text}}</p>
+</a>
 
 <div class="advicehouse science">
-  <div class="adviceimage"></div>
-  <div class="advicetext1">Bewährte Methoden und Erfahrung machen Roman & Astrid zu Ihrer ersten Wahl</div>
-  <div class="advicetext2">Führungsteams durch den Wandel begleiten</div>
+  <img class="adviceimage" src="/static{{ pics.homehero }}" alt="">
+  <div class="advicetext1">{{bodytext.21.text}}</div>
+  <div class="advicetext2">{{bodytext.22.text}}</div>
   <div class="advicecard">
     <div class="fullfill"><div class="center adviceimg adv1"></div></div>
     <div class="advicecardtext">
-      Gute Führungskräfte vereinen unterschiedliche Persönlichkeiten um gemeinsame Ziele. Sie fördern die Zusammenarbeit, lösen Konflikte und schaffen eine Kultur, in der sich die Menschen wertgeschätzt und verbunden fühlen.
+      {{bodytext.23.text}}
     </div>
   </div>
   <div class="advicecard">
     <div class="fullfill"><div class="center adviceimg adv2"></div></div>
     <div class="advicecardtext">
-      Sie schaffen Klarheit und Orientierung: Gute Führungskräfte kommunizieren Ziele, Rollen und Erwartungen klar und verständlich. So wissen alle, wofür sie arbeiten, wie ihr Beitrag zählt und wohin sich das Team gemeinsam entwickelt.
+      {{bodytext.24.text}}
     </div>
   </div>
   <div class="advicecard">
     <div class="fullfill"><div class="center adviceimg adv3"></div></div>
     <div class="advicecardtext">
-      Sie entwickeln Menschen gezielt weiter: Statt nur Ergebnisse einzufordern, erkennen sie Potenziale, fördern Stärken und begleiten Lernprozesse. Dadurch wachsen nicht nur die einzelnen Mitarbeitenden, sondern auch das gesamte Team nachhaltig.
+      {{bodytext.25.text}}
     </div>
   </div>
-  <div class="advicebutton">
+  <!-- <a href="{% url 'calander' %}" class="advicebutton">
     <div class="advicebuttontext science">
       Erfahren Sie mehr
     </div>
-  </div>
+  </a> -->
 </div>
 
 
 <div class="podhouse dosis">
   <div class="podtitle">
-    The Roman Astrid Podcast
+    {{bodytext.26.text}}
   </div>
   <div class="podbody">
-    <p class="minipodtitle">Führung hat nichts mit Titeln zu tun – es geht um Wirkung.</p>
+    <p class="minipodtitle">{{bodytext.27.text}}</p>
     <p>
-      Dieser Podcast erkundet, was Führung in der heutigen Welt wirklich bedeutet: im Beruf, im Privatleben und in der eigenen Persönlichkeitsentwicklung. Anhand praktischer Erkenntnisse, authentischer Gespräche und zeitloser Prinzipien vermitteln wir Ihnen, was Führung bedeutet und welche Fähigkeiten Sie konkret anwenden können. Ob Sie ein Team leiten oder einfach Ihr Leben mit Klarheit und Selbstvertrauen gestalten möchten – dieser Podcast ist genau das Richtige für Sie.
+      {{bodytext.28.text}}
     </p>
   </div>
 
@@ -236,11 +236,11 @@
       Listen On:
     </div>
 
-    <div class="listonitem">
+    <a href="https://open.spotify.com/show/4iq1Jm6HvznLWruUzlsNXU" class="listonitem">
       <div class="listenitemimg listens"></div>
-    </div>
+    </a>
 
-    <div class="listonitem">
+    <div id="youtubemusic" class="listonitem">
       <div class="listenitemimg listeny"></div>
     </div>
 
@@ -249,18 +249,18 @@
 </div>
 
 <div class="lasthouse science">
-  <div class="lasttitle poire">Führung echt jetzt</div>
-  <div class="lastminititle science">Treten Sie der Bewegung bei</div>
-  <div class="lastinfo science">Melden Sie sich an und erhalten Sie exklusive Inhalte, E-Mails und Dinge, die wir nirgendwo sonst teilen.</div>
+  <div class="lasttitle poire">{{bodytext.29.text}}</div>
+  <div class="lastminititle science">{{bodytext.30.text}}</div>
+  <div class="lastinfo science">{{bodytext.31.text}}</div>
   <input id="newslettername" class="lastinput" placeholder="Vorname" type="text" name="" value="">
   <input id="newsletteremail" class="lastinput" placeholder="Geben Sie Ihre E-Mail-Adresse ein" type="email" name="" value="">
   <div id="newsletter" class="lastinput lastbutton">
     <div class="center">
-      Lets Do it
+      {{bodytext.32.text}}
     </div>
   </div>
   <div class="fineprint science">
-    Mit der Eingabe deiner Daten wirst du zum Super-Insider – mit KOSTENLOSEM Zugang zu exklusiven Einblicken, privaten Fragerunden und vielem mehr, was ich hier aus rechtlichen Gründen nicht veröffentlichen kann, da ich sonst diese Website wahrscheinlich dauerhaft abschalten müsste. Deine Seele ist vermutlich sowieso nicht viel wert, also gib sie einfach her und gut ist. Ciao
+    {{bodytext.33.text}}
   </div>
 </div>
 

@@ -1,0 +1,222 @@
+{% extends 'roman/nav.html' %}
+{% load static %}
+
+{% block pregroup %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+<link rel="stylesheet"  href="{% static 'roman/css/home.css' %}">
+<link rel="stylesheet"  href="{% static 'roman/css/admin.css' %}">
+<div id="whichadmin" data-from="home" hidden></div>
+
+
+
+<div id="quotes" class="quotemargin">
+  <div id="quote" class="poire center quote"></div>
+  <div id="person" class="science center person twotext"></div>
+</div>
+<div id="loading" class="quotemargin">
+  <div id="loadingbar"></div>
+</div>
+
+<input type="text" name="{{bodytext.1.numo}}" value="{{bodytext.1.text}}" class="titletext wirsind center science admininput" placeholder="{{bodytext.1.text}}">
+
+<div class="card one">
+  <div class="fullfill texthouse">
+    <div class="fullfill">
+      <div class="center nameo science">Astrid Pfister</div>
+    </div>
+    <div class="fullfill attributes dosis">
+      <div class="fullfill">
+        <input type="text" name="{{bodytext.2.numo}}" class="admininput center" value="{{bodytext.2.text}}" placeholder="{{bodytext.2.text}}">
+      </div>
+      <div class="fullfill">
+        <input type="text" name="{{bodytext.3.numo}}" class="admininput center" value="{{bodytext.3.text}}" placeholder="{{bodytext.3.text}}">
+      </div>
+      <div class="fullfill">
+        <input type="text" name="{{bodytext.4.numo}}" class="admininput center" value="{{bodytext.4.text}}" placeholder="{{bodytext.4.text}}">
+      </div>
+    </div>
+  </div>
+  <div class="fullfill">
+    <form enctype="multipart/form-data" method="post" class="pic adminpic" action="{% url 'savepic' %}" style="background-image:url(/static{{ pics.astrid }})">
+      {% csrf_token %}
+      <input type="hidden" name="name" value="astrid">
+      <input type="hidden" name="next" value="{{ request.path }}">
+      <input  type="file" name="pic" value="">
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</div>
+
+<div class="card two">
+  <div class="fullfill">
+    <form enctype="multipart/form-data" method="post" class="pic adminpic" action="{% url 'savepic' %}" style="background-image:url(/static{{ pics.roman }})">
+      {% csrf_token %}
+      <input type="hidden" name="name" value="roman">
+      <input type="hidden" name="next" value="{{ request.path }}">
+      <input  type="file" name="pic" value="">
+      <button type="submit">Save</button>
+    </form>
+  </div>
+  <div class="fullfill texthouse">
+    <div class="fullfill">
+      <div class="center nameo science">Roman Wyss</div>
+    </div>
+    <div class="fullfill attributes dosis">
+      <div class="fullfill">
+        <input type="text" name="{{bodytext.5.numo}}" class="admininput center" value="{{bodytext.5.text}}" placeholder="{{bodytext.5.text}}">
+      </div>
+      <div class="fullfill">
+        <input type="text" name="{{bodytext.6.numo}}" class="admininput center" value="{{bodytext.6.text}}" placeholder="{{bodytext.6.text}}">
+      </div>
+      <div class="fullfill">
+        <input type="text" name="{{bodytext.7.numo}}" class="admininput center" value="{{bodytext.7.text}}" placeholder="{{bodytext.7.text}}">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="point">
+  <div class="fullhead">
+    <input type="text" name="{{bodytext.8.numo}}" class="admininput headtext maintext" value="{{bodytext.8.text}}" placeholder="{{bodytext.8.text}}">
+  </div>
+  <textarea name="{{bodytext.9.numo}}" rows="8" cols="80" class="pointbody twotext admininput">{{bodytext.9.text}}</textarea>
+</div>
+
+
+<div class="point">
+  <div class="pointhead">
+    <div class="fullfill">
+      <div class="center pointimg pi1"></div>
+    </div>
+    <div class="fullfill">
+      <input type="text" name="{{bodytext.10.numo}}" class="admininput center headtext maintext" value="{{bodytext.10.text}}" placeholder="{{bodytext.10.text}}">
+    </div>
+  </div>
+  <textarea name="{{bodytext.11.numo}}" rows="8" cols="80" class="pointbody twotext admininput">{{bodytext.11.text}}</textarea>
+</div>
+
+<div class="point">
+  <div class="pointhead">
+    <div class="fullfill">
+      <div class="center pointimg pi2"></div>
+    </div>
+    <div class="fullfill">
+      <input type="text" name="{{bodytext.12.numo}}" class="admininput center headtext maintext" value="{{bodytext.12.text}}" placeholder="{{bodytext.12.text}}">
+    </div>
+  </div>
+  <textarea name="{{bodytext.13.numo}}" rows="8" cols="80" class="pointbody twotext admininput">{{bodytext.13.text}}</textarea>
+</div>
+
+<div class="point">
+  <div class="pointhead">
+    <div class="fullfill">
+      <div class="center pointimg pi3"></div>
+    </div>
+    <div class="fullfill">
+      <input type="text" name="{{bodytext.14.numo}}" class="admininput center headtext maintext" value="{{bodytext.14.text}}" placeholder="{{bodytext.14.text}}">
+    </div>
+  </div>
+  <textarea name="{{bodytext.15.numo}}" rows="8" cols="80" class="pointbody twotext admininput">{{bodytext.15.text}}</textarea>
+</div>
+
+<div class="point">
+  <div class="pointhead">
+    <div class="fullfill">
+      <div class="center pointimg pi4"></div>
+    </div>
+    <div class="fullfill">
+      <input type="text" name="{{bodytext.16.numo}}" class=" center headtext maintext admininput" value="{{bodytext.16.text}}" placeholder="{{bodytext.16.text}}">
+    </div>
+  </div>
+  <textarea name="{{bodytext.17.numo}}" rows="8" cols="80" class="pointbody twotext admininput">{{bodytext.17.text}}</textarea>
+</div>
+
+<div class="point">
+  <div class="pointhead">
+    <div class="fullfill">
+      <div class="center pointimg pi5"></div>
+    </div>
+    <div class="fullfill">
+      <input type="text" name="{{bodytext.18.numo}}" class="center headtext maintext admininput" value="{{bodytext.18.text}}" placeholder="{{bodytext.18.text}}">
+    </div>
+  </div>
+  <textarea name="{{bodytext.19.numo}}" rows="8" cols="80" class="pointbody twotext admininput">{{bodytext.19.text}}</textarea>
+</div>
+
+<a id="consultation" class="button">
+  <input type="text" name="{{bodytext.20.numo}}" class="buttontext science admininput" value="{{bodytext.20.text}}" placeholder="{{bodytext.20.text}}">
+</a>
+
+<div class="advicehouse science">
+  <form enctype="multipart/form-data" method="post" class="adviceimage adminpic" action="{% url 'savepic' %}" style="background-image:url(/static{{ pics.homehero }})">
+    {% csrf_token %}
+    <input type="hidden" name="name" value="roman">
+    <input type="hidden" name="next" value="{{ request.path }}">
+    <input  type="file" name="pic" value="">
+    <button type="submit">Save</button>
+  </form>
+  <input type="text" name="{{bodytext.21.numo}}" class="advicetext1 admininput" value="{{bodytext.21.text}}" placeholder="{{bodytext.21.text}}">
+  <input type="text" name="{{bodytext.22.numo}}" class="advicetext2 admininput" value="{{bodytext.22.text}}" placeholder="{{bodytext.22.text}}">
+  <div class="advicecard">
+    <div class="fullfill"><div class="center adviceimg adv1"></div></div>
+    <textarea name="{{bodytext.23.numo}}" rows="8" cols="80" class="advicecardtext admininput">{{bodytext.23.text}}</textarea>
+  </div>
+  <div class="advicecard">
+    <div class="fullfill"><div class="center adviceimg adv2"></div></div>
+    <textarea name="{{bodytext.24.numo}}" rows="8" cols="80" class="advicecardtext admininput">{{bodytext.24.text}}</textarea>
+  </div>
+  <div class="advicecard">
+    <div class="fullfill"><div class="center adviceimg adv3"></div></div>
+    <textarea name="{{bodytext.25.numo}}" rows="8" cols="80" class="advicecardtext admininput">{{bodytext.25.text}}</textarea>
+  </div>
+  <!-- <a href="{% url 'calander' %}" class="advicebutton">
+    <div class="advicebuttontext science">
+      Erfahren Sie mehr
+    </div>
+  </a> -->
+</div>
+
+
+<div class="podhouse dosis">
+  <input type="text" name="{{bodytext.26.numo}}" class="podtitle admininput" value="{{bodytext.26.text}}" placeholder="{{bodytext.26.text}}">
+  <div class="podbody">
+    <input type="text" name="{{bodytext.27.numo}}" class="minipodtitle admininput" value="{{bodytext.27.text}}" placeholder="{{bodytext.27.text}}">
+    <textarea name="{{bodytext.28.numo}}" rows="8" cols="80" class=" admininput">{{bodytext.28.text}}</textarea>
+  </div>
+
+  <div class="optionshouse">
+    <div class="opttitle science">
+      Listen On:
+    </div>
+
+    <a href="https://open.spotify.com/show/4iq1Jm6HvznLWruUzlsNXU" class="listonitem">
+      <div class="listenitemimg listens"></div>
+    </a>
+
+    <div id="youtubemusic" class="listonitem">
+      <div class="listenitemimg listeny"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="lasthouse science">
+  <input type="text" name="{{bodytext.29.numo}}" class="lasttitle poire admininput" value="{{bodytext.29.text}}" placeholder="{{bodytext.29.text}}">
+  <textarea class="lastminititle science admininput" name="{{bodytext.30.numo}}" rows="8" cols="80">{{bodytext.30.text}}</textarea>
+  <textarea name="{{bodytext.31.numo}}" rows="8" cols="80" class="lastinfo science admininput">{{bodytext.31.text}}</textarea>
+  <input id="newslettername" class="lastinput" placeholder="Vorname" type="text" name="" value="">
+  <input id="newsletteremail" class="lastinput" placeholder="Geben Sie Ihre E-Mail-Adresse ein" type="email" name="" value="">
+  <div id="newsletter" class="lastinput lastbutton">
+    <input type="text" name="{{bodytext.32.numo}}" class="center admininput" value="{{bodytext.32.text}}" placeholder="{{bodytext.32.text}}">
+  </div>
+  <textarea name="{{bodytext.33.numo}}" rows="8" cols="80" class="fineprint science admininput">{{bodytext.33.text}}</textarea>
+</div>
+
+<!-- <script type="text/javascript" src="{% static 'roman/js/home.js' %}"></script> -->
+
+<script type="text/javascript" src="{% static 'roman/js/admin.js' %}"></script>
+
+{% endblock %}

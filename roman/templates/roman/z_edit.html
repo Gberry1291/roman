@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+{% if user.is_authenticated %}
+  <p style="font-size:20px;">Choose Page to Edit</p>
+  <form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Log Out</button>
+  </form>
+  <a href="{% url 'adminhome' %}" style="width:50%;height:10vh;display:flex;margin:5%;border:1px solid black;">
+    <div style="margin:auto">Home</div>
+  </a>
+
+  <a href="{% url 'adminabout' %}" style="width:50%;height:10vh;display:flex;margin:5%;border:1px solid black;">
+    <div style="margin:auto">About</div>
+  </a>
+
+  <a href="{% url 'sendemail' %}" style="width:50%;height:10vh;display:flex;margin:5%;border:1px solid black;">
+    <div style="margin:auto">Send Newsletter</div>
+  </a>
+
+
+{% else %}
+
+  <form  action="{% url 'edit' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" value="" style="width:50%;height:10vh;display:flex;margin:5%;border:1px solid black;" placeholder="email">
+
+    <input type="password" name="password" value="" style="width:50%;height:10vh;display:flex;margin:5%;border:1px solid black;" placeholder="password">
+
+    <button type="submit" style="width:50%;height:10vh;display:flex;margin:5%;border:1px solid black;">
+      <div style="margin:auto">
+        Sign in
+      </div>
+    </button>
+
+  </form>
+
+{% endif %}
+
+
+  </body>
+</html>

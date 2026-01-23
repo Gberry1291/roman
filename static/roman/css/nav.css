@@ -2,8 +2,9 @@
   --bodycolor: white;
   --logocolor: #041854;
   --textcolormain:#041854;
-  --textcolortwo:#C00021;
+  --textcolortwo:black;
   --textcolorthree:white;
+  --redcolor:#C00021;
   --buttonone:#041854;
   --buttontwo:#C00021;
 }
@@ -73,6 +74,9 @@ body{
 }
 .threetext{
   color:var(--textcolorthree)
+}
+.redcolor{
+  color:var(--redcolor)
 }
 .fullfill{
   display: flex;
@@ -158,6 +162,11 @@ body{
 .slideon{
   width:100%;
 }
+@media screen and (min-width: 900px) {
+  .slideon{
+    width:900px;
+  }
+}
 .x{
   height: 100%;
   aspect-ratio:1 / 1;
@@ -179,7 +188,6 @@ body{
 .questionhouse{
   position: fixed;
   top:0%;
-  left:0%;
   box-sizing: border-box;
   z-index: 5;
   height: 100%;
@@ -192,6 +200,11 @@ body{
 }
 .questionon{
   width:100%;
+}
+@media screen and (min-width: 900px) {
+  .questionon{
+    width:900px;
+  }
 }
 .closehouse{
   position: relative;

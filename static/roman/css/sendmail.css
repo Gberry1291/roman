@@ -1,0 +1,79 @@
+body{
+  margin:0px;
+}
+.fullfill{
+  position: relative;
+  height: 100%;
+  width:100%;
+  display: flex;
+}
+.center{
+  margin:auto;
+}
+.emailhouse{
+  height: 100vh;
+  width:96%;
+  margin-left: 2%;
+  display: grid;
+  grid-template-rows: 10% 10% 10% 40% 6%;
+  grid-row-gap: 5%;
+}
+.cover{
+  z-index: 5;
+}
+.sendy{
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  height: 10%;
+  width:100%;
+}
+.automargin{
+  margin-top:auto;
+  margin-bottom: auto;
+  margin-left:5%;
+}
+.border{
+  border: 1px solid #303030;
+}
+.personlist{
+  position: absolute;
+  overflow: hidden;
+  top:10%;
+  height:0%;
+  width:96%;
+  margin-left: 2%;
+  transition: height .5s;
+  background-color: white;
+  z-index: 4;
+}
+.on{
+  background-color: #C0FFB9;
+}
+.off{
+  background-color: #FFD0D0;
+}
+.showlist{
+  overflow: scroll;
+  height:83%;
+  border:1px solid black;
+}
+.checkhouse{
+  position: relative;
+  height:100%;
+  aspect-ratio:1/1;
+  display: flex;
+}
+.hbox{
+  height: 100%;
+  aspect-ratio:1/1;
+  opacity: .5;
+}
+.selected{
+  opacity:1;
+}
+.checkclip{
+  background-color: green;
+}
+.crossclip{
+  background-color: red;
+}

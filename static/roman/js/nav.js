@@ -53,3 +53,25 @@ function setCookie(cname, cvalue, exdays) {
   let expires = "expires="+ d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";"+"SameSite=None; Secure";
 }
+
+document.getElementById("newquestion").addEventListener("click",addToEmailList)
+function addToEmailList(){
+
+
+    let name=document.getElementById('questionnameinput').value
+    let email=document.getElementById('questionemailinput').value
+    let message=document.getElementById("questionjobinput").value
+
+    let newperson={"name":name,"email":email,"message":message}
+
+    path=extension+"/question"
+    whattosend=JSON.stringify(newperson)
+
+    setreq()
+    fetch(newreq).then(function(response) {
+      return response.json()
+    }).then(function(x) {
+      alert(x["message"])
+    });
+
+}

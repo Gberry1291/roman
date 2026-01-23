@@ -1,0 +1,63 @@
+{% extends 'roman/nav.html' %}
+{% load static %}
+
+{% block pregroup %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+<link rel="stylesheet" href="{% static 'roman/css/about.css' %}">
+<link rel="stylesheet"  href="{% static 'roman/css/admin.css' %}">
+<div id="whichadmin" data-from="about" hidden></div>
+
+<form enctype="multipart/form-data" method="post" class="banner adminpic" action="{% url 'savepic' %}" style="background-image:url(/static{{ pics.aboutbanner }})">
+  {% csrf_token %}
+  <input type="hidden" name="name" value="aboutbanner">
+  <input type="hidden" name="next" value="{{ request.path }}">
+  <input  type="file" name="pic" value="">
+  <button type="submit">Save</button>
+</form>
+<textarea name="{{bodytext.1.numo}}" class="bannertext twotext science admininput">{{bodytext.1.text}}</textarea>
+
+<textarea name="{{bodytext.2.numo}}" class="visiontext dosis spacetext admininput">{{bodytext.2.text}}</textarea>
+
+<div class="card">
+  <div class="fullfill">
+    <form enctype="multipart/form-data" method="post" class="cardimg img1 adminpic" action="{% url 'savepic' %}" style="background-image:url(/static{{ pics.aboutroman }})">
+      {% csrf_token %}
+      <input type="hidden" name="name" value="aboutroman">
+      <input type="hidden" name="next" value="{{ request.path }}">
+      <input  type="file" name="pic" value="">
+      <button type="submit">Save</button>
+    </form>
+  </div>
+  <div class="fullfill">
+    <div class="center cardtitle twotext science">
+      Roman Wyss
+    </div>
+  </div>
+</div>
+<textarea name="{{bodytext.3.numo}}" class="carddes dosis spacetext admininput">{{bodytext.3.text}}</textarea>
+
+<div class="card">
+  <div class="fullfill">
+    <div class="center cardtitle twotext science">
+      Astrid Pfister
+    </div>
+  </div>
+  <div class="fullfill">
+    <form enctype="multipart/form-data" method="post" class="cardimg img2 adminpic" action="{% url 'savepic' %}" style="background-image:url(/static{{ pics.aboutastrid }})">
+      {% csrf_token %}
+      <input type="hidden" name="name" value="aboutastrid">
+      <input type="hidden" name="next" value="{{ request.path }}">
+      <input  type="file" name="pic" value="">
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</div>
+<textarea name="{{bodytext.4.numo}}" class="carddes dosis spacetext admininput">{{bodytext.4.text}}</textarea>
+
+<div class="spaceholder">
+
+</div>
+
+<script type="text/javascript" src="{% static 'roman/js/admin.js' %}"></script>
+{% endblock %}

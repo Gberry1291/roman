@@ -96,6 +96,10 @@ function makesound(){
     })
 }
 
+document.getElementById("youtubemusic").addEventListener("click",function(){
+  alert("Ups! Wir haben unseren YouTube-Account noch nicht eingerichtet. Schaut bald wieder vorbei!")
+})
+
 document.getElementById("newsletter").addEventListener("click",addToEmailList)
 function addToEmailList(){
 

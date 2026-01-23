@@ -1,0 +1,24 @@
+.admininput {
+  color:black;
+  overflow: visible;
+  width:100%;
+  margin:0%;
+  padding:0%;
+}
+.savebutton{
+  background-color: red;
+  position: fixed;
+  height: 10%;
+  width:50%;
+  left:25%;
+  top:0px;
+  display: flex;
+}
+.savetext{
+  margin: auto;
+  color:white;
+  font-weight: bolder;
+}
+.adminpic{
+  border:2px solid black;
+}

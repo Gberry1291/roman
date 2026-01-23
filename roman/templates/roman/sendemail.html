@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+<link rel="stylesheet"  href="{% static 'roman/css/sendmail.css' %}">
+
+  <body>
+
+    <div id="personlist" class="personlist">
+      {% for user in userlist %}
+        <div id="sendy{{forloop.counter}}" class="sendy on" data-email="{{user.email}}">
+          <div class="fullfill"><div data-count="{{forloop.counter}}" id="check{{forloop.counter}}" class="checkclip hbox center selected"></div></div>
+          <div class="fullfill"><div class="center">{{user.name}} : {{user.email}}</div></div>
+          <div class="fullfill"><div data-count={{forloop.counter}} id="cross{{forloop.counter}}" class="crossclip hbox center"></div></div>
+        </div>
+      {% endfor %}
+    </div>
+
+  <div class="emailhouse">
+
+    <div id="mailtog" class="fullfill border">
+      <div class="cover fullfill">
+        <span class="automargin">Edit Mailing List</span><span class="automargin"><span id="count">{{userlist|length}}</span> Recipients</span>
+      </div>
+    </div>
+
+    <input id="subject" class="fullfill" type="text" name="" value="" placeholder="Subject">
+
+    <input id="linktoimage" class="fullfill" type="text" name="" value="" placeholder="Link to Image">
+
+    <input id="message" class="fullfill" type="text" name="" value="" placeholder="Message">
+
+    <div id="send" class="fullfill border">
+      <div class="center">
+        Send Newsletter
+      </div>
+    </div>
+
+  </div>
+
+  </body>
+
+<script type="text/javascript" src="{% static 'roman/js/sendmail.js' %}"></script>
+
+</html>

@@ -1,0 +1,9 @@
+
+
+From: {{fromtext}}
+
+Email: {{emailtext}}
+
+{{message}}
+
+{{footer}}

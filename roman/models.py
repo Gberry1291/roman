@@ -49,3 +49,34 @@ class NewsLetter(models.Model):
 
     class Meta:
         ordering = ['email']
+
+class HomeText(models.Model):
+
+    numo= models.CharField(max_length=None)
+    text= models.CharField(max_length=None)
+
+    def save(self,*args,**kwargs):
+        super().save(*args,**kwargs)
+
+    class Meta:
+        ordering = ['numo']
+
+class AboutText(models.Model):
+
+    numo= models.CharField(max_length=None)
+    text= models.CharField(max_length=None)
+
+    def save(self,*args,**kwargs):
+        super().save(*args,**kwargs)
+
+    class Meta:
+        ordering = ['numo']
+class HomePics(models.Model):
+    name = models.CharField(max_length=255,unique=True)
+    mainpic = models.ImageField(upload_to="roman/css/userpics",height_field=None,width_field=None,max_length=None,blank=True,null=True)
+
+    def save(self,*args,**kwargs):
+        super().save(*args,**kwargs)
+
+    class Meta:
+        ordering = ['name']
